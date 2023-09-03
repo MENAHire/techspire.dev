@@ -943,15 +943,15 @@
 
             <div class="col-lg-6">
               <div class="row">
-                <div class="col-md-5 info">
+                <div class="col-md-4 info">
                   <i class="ion-ios-location-outline"></i>
                   <p>Beirut Digital District</p>
                 </div>
                 <div class="col-md-4 info">
                   <i class="ion-ios-email-outline"></i>
-                  <p>melhem.rahmeh@outlook.com</p>
+                  <p>tech-hub.lb@outlook.com</p>
                 </div>
-                <div class="col-md-3 info">
+                <div class="col-md-4 info">
                   <i class="ion-ios-telephone-outline"></i>
                   <p>+961 71 589 832</p>
                 </div>
@@ -1018,6 +1018,54 @@
                     </button>
                   </div>
                 </form>
+
+                <script>
+                  document.addEventListener("DOMContentLoaded", function () {
+                    const contactForm = document.querySelector(".contactForm");
+
+                    contactForm.addEventListener("submit", function (e) {
+                      e.preventDefault(); // Prevent default form submission
+
+                      const formData = {
+                        service_id: "service_h6ialz4",
+                        template_id: "template_6c4cjcf",
+                        user_id: "vuVUOt_q8agHdR6wi",
+                        template_params: {
+                          username: document.getElementById("name").value,
+                          email: document.getElementById("email").value,
+                          subject: document.getElementById("subject").value,
+                          message: document.querySelector(
+                            'textarea[name="message"]'
+                          ).value,
+                        },
+                      };
+
+                      sendData(formData);
+                    });
+                  });
+
+                  function sendData(data) {
+                    fetch("https://api.emailjs.com/api/v1.0/email/send", {
+                      method: "POST",
+                      headers: {
+                        "Content-Type": "application/json",
+                      },
+                      body: JSON.stringify(data),
+                    })
+                      .then((response) => {
+                        if (!response.ok) {
+                          throw new Error("Network response was not ok");
+                        }
+                        return response.json();
+                      })
+                      .then((data) => {
+                        alert("Email sent successfully!");
+                      })
+                      .catch((error) => {
+                        alert("Error sending email: " + error.message);
+                      });
+                  }
+                </script>
               </div>
             </div>
           </div>
