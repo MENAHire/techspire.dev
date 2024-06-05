@@ -963,6 +963,7 @@ h6 {
 }
 .quote-box {
   text-align: center; /* Center-align the box */
+  width: 150px;
   /* margin: 20px; Add some margin around the box */
 }
 
@@ -1420,4 +1421,9 @@ h6 {
 .success-toast .toast-body {
   background-color: #d4edda;
   /* Lighter shade of green for the body */
+}
+
+#wordDisplay {
+  transition: opacity 0.4s ease-in-out;
+  opacity: 0;
 }
