@@ -973,7 +973,7 @@ h6 {
   background-color: #007bff; /* Set the background color to blue */
   color: white; /* Set the text color to white */
   text-decoration: none; /* Remove underline from the link */
-  border-radius: 5px; /* Add rounded corners to the box */
+  border-radius: 15px; /* Add rounded corners to the box */
   font-weight: bold; /* Make the font bold */
   transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
