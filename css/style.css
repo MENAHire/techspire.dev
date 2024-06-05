@@ -924,89 +924,59 @@ h6 {
 /* Team Section
 --------------------------------*/
 
-#team {
-  background: #fff;
-  padding: 60px 0;
-  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
-}
-
 #team .member {
   text-align: center;
   margin-bottom: 20px;
-  position: relative;
-  border-radius: 50%;
-  overflow: hidden;
+  border-radius: 50%;  /* Changed from 50% to remove the circle mask if needed */
+  overflow: visible;  /* Allows elements to be visible outside the container */
 }
 
 #team .member .member-info {
-  opacity: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
+  flex-direction: column;
   align-items: center;
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  transition: 0.2s;
+  padding: 15px 0; /* Added padding for spacing */
+  background: transparent; /* Ensure no background color on the text block */
+  color: #333; /* Set text color */
+  transition: none;  /* Remove transitions related to hover */
 }
 
-#team .member .member-info-content {
-  margin-top: 50px;
-  transition: margin 0.2s;
-}
-
-#team .member:hover .member-info {
-  background: rgba(0, 62, 128, 0.7);
-  opacity: 1;
-  transition: 0.4s;
-}
-
-#team .member:hover .member-info-content {
-  margin-top: 0;
-  transition: margin 0.4s;
+.images-circle{
+  border-radius: 50%; 
 }
 
 #team .member h4 {
   font-weight: 700;
   margin-bottom: 2px;
   font-size: 18px;
-  color: #fff;
+  color: #333; /* Changed color for visibility */
 }
 
 #team .member span {
   font-style: italic;
   display: block;
   font-size: 13px;
-  color: #fff;
+  color: #666; /* Changed color for visibility */
 }
 
 #team .member .social {
-  margin-top: 15px;
+  margin-top: 10px; /* Adjusted margin */
 }
 
 #team .member .social a {
-  transition: none;
-  color: #fff;
+  color: #007bff; /* Set default color */
+  transition: color 0.3s; /* Smooth color transition on hover */
 }
 
 #team .member .social a:hover {
-  color: #007bff;
+  color: #0056b3; /* Darker blue on hover */
 }
 
 #team .member .social i {
   font-size: 18px;
-  margin: 0 2px;
+  margin: 0 5px; /* Adjusted spacing */
 }
+
 
 /* Clients Section
 --------------------------------*/
