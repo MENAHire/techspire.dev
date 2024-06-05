@@ -951,6 +951,25 @@ h6 {
   font-size: 18px;
   color: #333; /* Changed color for visibility */
 }
+.quote-box {
+  text-align: center; /* Center-align the box */
+  /* margin: 20px; Add some margin around the box */
+}
+
+.quote-link {
+  display: inline-block; /* Make the link behave like a block element but only as wide as necessary */
+  padding: 10px 20px; /* Add padding inside the box */
+  background-color: #007BFF; /* Set the background color to blue */
+  color: white; /* Set the text color to white */
+  text-decoration: none; /* Remove underline from the link */
+  border-radius: 5px; /* Add rounded corners to the box */
+  font-weight: bold; /* Make the font bold */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.quote-link:hover {
+  background-color: #0056b3; /* Darker blue on hover for better interaction */
+}
 
 #team .member span {
   font-style: italic;
