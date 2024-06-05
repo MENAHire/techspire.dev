@@ -57,7 +57,11 @@
           setTimeout(() => {
             display.textContent = words[currentWordIndex];
             display.style.opacity = 1; // Fade in the new word
-            display.style.fontWeight = "bold"; // Make the text bold
+            if (display.id !== "non-bold") {
+              display.style.fontWeight = "bold";
+            } else {
+              display.style.fontWeight = "normal";
+            }
           }, 400); // Matches the transition time set in CSS
         });
 
@@ -70,7 +74,11 @@
         displays.forEach((display) => {
           display.textContent = words[0]; // Initialize with the first word
           display.style.opacity = 1; // Ensure it's visible at start
-          display.style.fontWeight = "bold"; // Start with bold text
+          if (display.id !== "non-bold") {
+            display.style.fontWeight = "bold";
+          } else {
+            display.style.fontWeight = "normal";
+          }
         });
         setInterval(switchWords, 5000); // Switch words every 10 seconds
       });
@@ -1237,7 +1245,11 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#team">Team</a></li>
-                <li><a href="#contact" class="wordDisplay">Request a quote</a></li>
+                <li>
+                  <a href="#contact" class="wordDisplay" id="non-bold"
+                    >Request a quote</a
+                  >
+                </li>
               </ul>
             </div>
 
