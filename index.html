@@ -45,36 +45,35 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script>
-      const words = ["Request a Quote", "Contact Us"];  // Words to switch between
+      const words = ["Request a Quote", "Contact Us"]; // Words to switch between
       let currentWordIndex = 0;
-      
+
       function switchWords() {
-          const displays = document.querySelectorAll(".wordDisplay");
-          displays.forEach(display => {
-              display.style.opacity = 0; // Fade out the word
-      
-              // Change the word after the fade-out transition is done
-              setTimeout(() => {
-                  display.textContent = words[currentWordIndex];
-                  display.style.opacity = 1; // Fade in the new word
-                  display.style.fontWeight = "bold"; // Make the text bold
-              }, 400); // Matches the transition time set in CSS
-          });
-      
-          // Update index for the next cycle
-          currentWordIndex = (currentWordIndex + 1) % words.length;
+        const displays = document.querySelectorAll(".wordDisplay");
+        displays.forEach((display) => {
+          display.style.opacity = 0; // Fade out the word
+
+          // Change the word after the fade-out transition is done
+          setTimeout(() => {
+            display.textContent = words[currentWordIndex];
+            display.style.opacity = 1; // Fade in the new word
+            display.style.fontWeight = "bold"; // Make the text bold
+          }, 400); // Matches the transition time set in CSS
+        });
+
+        // Update index for the next cycle
+        currentWordIndex = (currentWordIndex + 1) % words.length;
       }
-      
-      document.addEventListener("DOMContentLoaded", function() {
-          const displays = document.querySelectorAll(".wordDisplay");
-          displays.forEach(display => {
-              display.textContent = words[0]; // Initialize with the first word
-              display.style.opacity = 1; // Ensure it's visible at start
-              display.style.fontWeight = "bold"; // Start with bold text
-          });
-          setInterval(switchWords, 5000); // Switch words every 10 seconds
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const displays = document.querySelectorAll(".wordDisplay");
+        displays.forEach((display) => {
+          display.textContent = words[0]; // Initialize with the first word
+          display.style.opacity = 1; // Ensure it's visible at start
+          display.style.fontWeight = "bold"; // Start with bold text
+        });
+        setInterval(switchWords, 5000); // Switch words every 10 seconds
       });
-      
     </script>
   </head>
 
@@ -1038,7 +1037,7 @@
               <div class="row">
                 <div class="col-md-4 info">
                   <i class="ion-ios-location-outline"></i>
-                  <p>Baouchriyeh - Next to Medco Milan</p>
+                  <p>Baouchriyeh - Next to Almaza HQ</p>
                 </div>
                 <div class="col-md-4 info">
                   <i class="ion-ios-email-outline"></i>
