@@ -1427,3 +1427,37 @@ h6 {
   transition: opacity 0.4s ease-in-out;
   opacity: 0;
 }
+
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff; /* Change to match your design */
+  padding: 20px 0;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.stat-info {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 20px; /* Adjust size as needed */
+  font-weight: bold;
+}
+
+.stat-description {
+  font-size: 16px; /* Adjust size as needed */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .stats-container {
+      flex-direction: column;
+  }
+}
