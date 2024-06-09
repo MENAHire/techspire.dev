@@ -1443,23 +1443,28 @@ h6 {
 }
 
 .icon {
-  font-size: 40px; /* Adjust the size of the icons */
+  font-size: 50px; /* Adjust the size of the icons */
   margin-bottom: 10px;
   color: #007bff;
 }
 
 .stat-number {
-  font-size: 20px; /* Adjust size as needed */
+  font-size: 22px; /* Adjust size as needed */
   font-weight: bold;
 }
 
 .stat-description {
-  font-size: 16px; /* Adjust size as needed */
+  font-size: 22px; /* Adjust size as needed */
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .stats-container {
       flex-direction: column;
+      padding: 10px;
+  }
+
+  .stat-item{
+    margin-bottom: 30px;
   }
 }
